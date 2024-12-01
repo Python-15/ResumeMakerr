@@ -255,6 +255,7 @@ const SummaryDetails = ({ enabledNext }) => {
       <Button variant="ghost" onClick={() => setIsDialogOpen(false)}>
         Cancel
       </Button>
+      
     </DialogFooter>
   </DialogContent>
 </Dialog>
