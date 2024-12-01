@@ -67,7 +67,6 @@ function Experience() {
                 experience: experinceList.map(({ id, ...rest }) => rest),
             },
         };
-        console.log('Request data:', JSON.stringify(data, null, 2));
         apiServices.updatePersonalDetails(params?.resumeId, data).then(
             res => {
                 setLoading(false);

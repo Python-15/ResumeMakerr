@@ -116,14 +116,14 @@ const SummaryDetails = ({ enabledNext }) => {
   
       setLoading(true);
       const PROMPT = Prompt.replace('{jobTitle}', resumeInfo?.jobTitle).replace('{summery}', summery);
-      console.log(PROMPT);
+
   
       try {
           const result = await chatSession.sendMessage(PROMPT);
           let responseText = await result.response.text();
   
           // Log the raw response for debugging
-          console.log("Raw response text:", responseText);
+
   
           // Try to extract JSON part only
           const jsonStart = responseText.indexOf('[');
@@ -133,7 +133,7 @@ const SummaryDetails = ({ enabledNext }) => {
               const aiSummaryList = JSON.parse(jsonResponse);
               // Log the list to verify it
               setAiGeneratedSummeryList(aiSummaryList);
-              console.log("AI Summary List:", aiGeneratedSummeryList);
+
   
               setIsDialogOpen(true);
           } else {
@@ -153,7 +153,7 @@ const SummaryDetails = ({ enabledNext }) => {
         setIsDialogOpen(false); // Close the dialog after selection
     };
     
-    console.log(isDialogOpen); // Log the state to verify it's being triggered
+
     
     const onSave = (e) => {
         e.preventDefault();
@@ -164,7 +164,7 @@ const SummaryDetails = ({ enabledNext }) => {
             }
         };
         apiServices.updatePersonalDetails(params?.resumeId, data).then(resp => {
-            console.log(resp);
+
             enabledNext(true);
             setLoading(false);
             toast("Details updated");

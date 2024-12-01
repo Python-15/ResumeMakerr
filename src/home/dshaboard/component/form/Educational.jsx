@@ -60,7 +60,6 @@ function Education() {
     }
 
     apiServices.updatePersonalDetails(params.resumeId,data).then(resp=>{
-      console.log(resp);
       setLoading(false)
       toast('Details updated !')
     },(error)=>{
