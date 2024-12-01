@@ -1,0 +1,41 @@
+.skills-section {
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-top: 4px solid #007bff;
+    border-radius: 8px;
+    margin-top: 20px;
+  }
+  
+  .skills-section h2 {
+    font-weight: bold;
+    font-size: 1.25rem;
+  }
+  
+  .skills-section p {
+    margin-bottom: 10px;
+  }
+  
+  .skills-section .input-box {
+    margin-bottom: 10px;
+  }
+  
+  .skills-section .button-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .skills-section .button-group .buttons {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .skills-section .button-group .buttons button {
+    border: 1px solid #007bff;
+    color: #007bff;
+  }
+  
+  .skills-section .button-group .save-button {
+    display: flex;
+    align-items: center;
+  }

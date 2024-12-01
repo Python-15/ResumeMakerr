@@ -1,0 +1,8 @@
+.DashBoard_container{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    left: 2rem;
+    
+    top: 6rem;
+}

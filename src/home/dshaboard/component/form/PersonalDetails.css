@@ -1,0 +1,24 @@
+  .personal_details{
+  padding-inline: 8px;
+    width: 350%;
+    padding-block: 5%;
+
+  }
+
+ .summary_details{ 
+  padding-inline-end: 15Px;
+  /* padding-bottom: 26px; */
+  width: 391%;
+  padding-inline-start: 10px;
+ }
+ 
+ .select_summary{
+  width: 26%;
+ }
+ .radio-wrapper {
+  display: flex;
+  align-items: center;
+}
+.dialouge_box{
+  height: 80%;
+}
