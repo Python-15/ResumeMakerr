@@ -42,7 +42,7 @@ function Formsection() {
         )}
         {activeFormIndex < 5 && (
           <Button
-            disabled={!enableNext}
+          
             className="flex gap-2"
             size="sm"
             onClick={() => setActiveFormIndex(activeFormIndex + 1)}
