@@ -6,7 +6,7 @@ import SigninPage from './auth/signin';
 import Home from './home/Home';
 import Edit from './home/dshaboard/resume/[resumeid]/Edit';
 import {
-  createBrowserRouter,
+  createHashRouter,  // Use HashRouter instead of BrowserRouter
   RouterProvider,
 } from 'react-router-dom';
 import { ClerkProvider } from '@clerk/clerk-react';
@@ -18,7 +18,7 @@ if (!PUBLISHABLE_KEY) {
   throw new Error('Missing Publishable Key');
 }
 
-const resumeRoute = createBrowserRouter([
+const resumeRoute = createHashRouter([  // Change to createHashRouter
   {
     path: '/',
     element: <App />,
@@ -41,7 +41,6 @@ const resumeRoute = createBrowserRouter([
     path: 'auth/signpage',
     element: <SigninPage />,
   },
-  
 ]);
 
 createRoot(document.getElementById('root')).render(
