@@ -5,9 +5,9 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-  "build": "vite build",
-  "preview": "vite preview",
-  "deploy": "vite-plugin-gh-pages"
+    "build": "vite build",
+    "preview": "vite preview",
+    "deploy": "vite-plugin-gh-pages"
   },
   "dependencies": {
     "@clerk/clerk-react": "^5.13.1",
