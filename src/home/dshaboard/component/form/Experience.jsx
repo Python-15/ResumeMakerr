@@ -216,19 +216,26 @@ function Experience() {
                             overflowY: 'auto',   // Enables vertical scrolling when content overflows
                         }}
                     >
-                        {aiGeneratedExperienceList.map((item, index) => (
-                            <div key={index} onClick={() => handleExperienceSelection(item)}>
-                                <h3>{item.title}</h3>
-                                <p>{item.company}</p>
-                                <p>{item.years}</p>
-                                <p>{item.description}</p>
-                                <ul>
-                                    {item.achievements.map((achievement, i) => (
-                                        <li key={i}>{achievement}</li>
-                                    ))}
-                                </ul>
-                            </div>
-                        ))}
+                        {aiGeneratedExperienceList && aiGeneratedExperienceList.length > 0 && 
+    aiGeneratedExperienceList.map((item, index) => (
+        <div key={index} onClick={() => handleExperienceSelection(item)}>
+            <h3>{item.title}</h3>
+            <p>{item.company}</p>
+            <p>{item.years}</p>
+            <p>{item.description}</p>
+            <ul>
+                {item.achievements?.length > 0 ? (
+                    item.achievements.map((achievement, i) => (
+                        <li key={i}>{achievement}</li>
+                    ))
+                ) : (
+                    <li>No achievements listed.</li>
+                )}
+            </ul>
+        </div>
+    ))
+}
+
                     </div>
                     <DialogFooter>
                         <Button onClick={() => setIsDialogOpen(false)} variant="ghost">Cancel</Button>

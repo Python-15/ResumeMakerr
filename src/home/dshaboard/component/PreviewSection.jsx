@@ -11,7 +11,7 @@ function PreviewSection() {
   const { resumeInfo } = useContext(ResumeContext);
 
   return (
-    <div className="preview-section w-full max-w-[800px] mx-auto p-8 bg-white shadow-xl rounded-lg"
+    <div className="preview-section w-full max-w-[800px] mx-auto p-8 bg-white  rounded-lg"
     id='preview-section'>
       {/* Personal Information */}
       <div className="pb-4 mb-4">

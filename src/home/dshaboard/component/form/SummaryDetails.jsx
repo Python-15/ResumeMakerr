@@ -229,26 +229,32 @@ const SummaryDetails = ({ enabledNext }) => {
         overflowY: 'auto',   // Enables vertical scrolling when content overflows
       }}
     >
-      {aiGeneratedSummeryList.map((item, index) => (
-        <div key={index} className="flex items-start gap-2">
-         
-          <div className="mt-2">
-           <input 
-           type="radio"
-            onClick={() => handleSummarySelection(item.summary)}
-           />
-             
-           <strong>{item.experience_level}</strong>: 
-            {/* Split summary into multiple paragraphs */}
-            {item.summary.map((paragraph, paragraphIndex) => (
-              <p key={paragraphIndex} className="mb-2">
-                {paragraph}
-              </p>
-            ))}
-          </div>
-         
-        </div>
-      ))}
+       {aiGeneratedSummeryList.length > 0 ? (
+              aiGeneratedSummeryList.map((item, index) => (
+                <div key={index} className="flex items-start gap-2">
+                  <div className="mt-2">
+                    <input 
+                      type="radio"
+                      onClick={() => handleSummarySelection(item.summary)}
+                    />
+                    <strong>{item.experience_level}</strong>: 
+                    {Array.isArray(item.summary) ? (
+                      item.summary.map((paragraph, paragraphIndex) => (
+                        <p key={paragraphIndex} className="mb-2">
+                          {paragraph}
+                        </p>
+                      ))
+                    ) : (
+                      <p>{item.summary}</p>
+                    )}
+                  </div>
+                </div>
+              ))
+            ) : (
+              <p>No summaries available</p>
+
+      
+      )}
     </div>
 
     <DialogFooter>
