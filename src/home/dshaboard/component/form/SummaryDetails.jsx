@@ -5,7 +5,7 @@ import { useContext, useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import apiServices from '../../../../../apiServices/apiServices';
 import { LoaderCircle } from 'lucide-react';
-import { chatSession } from '../../../../../apiServices/aiAPIservice';
+import { chatSession } from '../../../../../apiServices/AiapiService';
 import './PersonalDetails.css'; 
 import {
     Dialog,

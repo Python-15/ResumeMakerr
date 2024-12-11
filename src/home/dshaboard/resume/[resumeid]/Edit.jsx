@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, useLocation } from 'react-router-dom';
-import FormSection from '../../component/FormSection';
+import FormSection from '../../component/Formsection';
 import PreviewSection from '../../component/PreviewSection';
 import { ResumeContext } from '@/context/ResumeInfoContext';
 import mockdata from '@/data/dummy';
